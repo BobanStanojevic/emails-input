@@ -14,7 +14,7 @@ Download the project either via git or download button, run `yarn` and `yarn dev
 
 I've splitted the scripts according to their use:
 
-- components: are visual logical part of the application 
+- components: are visual logical part of the application
 - assets: are used for different type of static resources(images, fonts, styles)
 - root index.js is used for the presentation purpose as a demo script
 - I've splitted the webpack builds to dev and production
@@ -29,8 +29,8 @@ Default production build provides a link plug and use type of plgin/component wh
 </head>
 
 <script>
- const inputContainer = document.querySelector('.emails-input') // your container where you want email-inputs component to be instanciated
- const emailsInput = new EmailsInput(inputContainer)
+  const inputContainer = document.querySelector('.emails-input') // your container where you want email-inputs component to be instanciated
+  const emailsInput = new EmailsInput(inputContainer)
 </script>
 ```
 
@@ -38,9 +38,7 @@ Default production build provides a link plug and use type of plgin/component wh
 
 ```js
 // Placeholder container where the component will be rendered
-const inputContainer = document.querySelector(
-  '.emails-input'
-)
+const inputContainer = document.querySelector('.emails-input')
 
 // Initialization
 const emailsInput = new EmailsInput(inputContainer)
@@ -66,7 +64,7 @@ emailsinput.subscribeToChanges(() => console.log('my fancy function'))
 /** insertEmailBlock
  * Returns: Void
  * Params: Email String:
- *   'mufasa@lion.com'
+ *   'joan@miro.com'
  */
-insertEmail: this.insertEmailBlock('mufasa@lion.com')
+insertEmail: this.insertEmailBlock('joan@miro.com')
 ```
