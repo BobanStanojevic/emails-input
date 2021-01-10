@@ -8,7 +8,6 @@ class EmailsInput {
 
     return {
       getAllEmails: this.getAllEmails.bind(this),
-      replaceEmails: this.replaceEmails.bind(this),
       subscribeToChanges: this.subscribeToChanges.bind(this),
       insertEmail: this.insertEmailBlock.bind(this),
     }
@@ -108,33 +107,6 @@ class EmailsInput {
     const value = clipboardData.getData('text')
 
     this.insertMultipleEmailBlocks(value)
-  }
-
-  replaceEmails(newEmails) {
-    const emailBlocksTexts = this.container.querySelectorAll(
-      '.emails-input__pill-text'
-    )
-    const replacedEmails = []
-    const replacedEmailBlocks = []
-
-    for (let i = 0; i < emailBlocksTexts.length; i++) {
-      const emailBlockText = emailBlocksTexts[i]
-      const { textContent } = emailBlockText
-      const newEmail = newEmails[textContent]
-
-      if (!newEmail) break
-
-      emailBlockText.textContent = newEmail
-
-      replacedEmails.push(newEmail)
-      replacedEmailBlocks.push(emailBlockText.parentElement)
-    }
-
-    this.emitChange({
-      type: 'replace',
-      values: [replacedEmails],
-      elements: [replacedEmailBlocks],
-    })
   }
 
   getAllEmails() {

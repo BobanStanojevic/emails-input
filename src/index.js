@@ -6,7 +6,13 @@ import EmailsInput from './components/emails-input/index'
 const inputContainer = document.querySelector('.emails-input')
 const emailsInput = new EmailsInput(inputContainer)
 
-const randomEmails = ['joan@miro.com', 'rene@magritte.com', 'pablo@picasso.com']
+const randomEmails = [
+  'joan@miro.com',
+  'rene@magritte.com',
+  'pablo@picasso.com',
+  'salvador@dali.com',
+  'sava@sumanovic.com',
+]
 const addEmailButton = document.querySelector('#add-email')
 const getEmailsCountButton = document.querySelector('#count-emails')
 
